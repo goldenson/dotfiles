@@ -14,3 +14,6 @@
 	default = current
 [diff]
 	noprefix = true
+[alias]
+	uncommit = reset --soft HEAD^
+	unstage = reset
