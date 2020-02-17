@@ -1,0 +1,10 @@
+{
+  "editor.tabSize": 2,
+  "ruby.intellisense": "rubyLocate",
+  "workbench.colorTheme": "Monokai",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true
+}
