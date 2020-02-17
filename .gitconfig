@@ -1,0 +1,16 @@
+[user]
+	name = Maxime Orefice
+	email = morefice@gitlab.com
+[color]
+	ui = true
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[core]
+	autocrlf = input
+[push]
+	default = current
+[diff]
+	noprefix = true
