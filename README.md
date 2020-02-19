@@ -1,9 +1,11 @@
 ## 📝 Dotfiles
 
-### Set up git
+### Installation
 
-`ln -s /Users/goldenson/Code/dotfiles/.gitconfig ~/.gitconfig`
+1. Clone this repository
+2. Make sure to create a `Code` directory
+3. Run the script:
 
-### Set up vs code
-
-`ln -s /Users/goldenson/Code/dotfiles/vscode.json ~/Library/ApplicationSupport/Code/User/settings.json`
+```ruby
+ruby install.ruby
+```
