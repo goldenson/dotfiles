@@ -6,5 +6,7 @@
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "files.insertFinalNewline": true,
-  "files.trimTrailingWhitespace": true
+  "files.trimTrailingWhitespace": true,
+  "explorer.confirmDragAndDrop": false,
+  "window.zoomLevel": 0
 }
