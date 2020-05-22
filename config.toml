@@ -1,0 +1,21 @@
+
+[[runners]]
+  name = "docker"
+  # https://gitlab.com/gitlab-org/gitlab-development-kit/blob/master/doc/howto/runner.md#docker-executor
+  url = "http://host.docker.internal:3000/"
+  token = "YOUR_TOKEN"
+  executor = "docker"
+  [runners.custom_build_dir]
+  [runners.cache]
+    [runners.cache.s3]
+    [runners.cache.gcs]
+  [runners.docker]
+    tls_verify = false
+    image = "alpine:latest"
+    # https://docs.gitlab.com/runner/executors/docker.html#use-docker-in-docker-with-privileged-mode
+    privileged = true
+    disable_entrypoint_overwrite = false
+    oom_kill_disable = false
+    disable_cache = false
+    volumes = ["/cache"]
+    shm_size = 0
