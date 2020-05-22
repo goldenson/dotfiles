@@ -155,3 +155,11 @@ bashcompinit
 source "/Users/goldenson/Code/gitlab-development-kit/support/completions/gdk.bash"
 
 export PATH="/usr/local/sbin:$PATH"
+
+### Functions
+
+git () {
+  if command git "$@"; then
+    [[ $1 == "clone" ]] && cd "${${2##*/}%.git}"
+  fi
+}
