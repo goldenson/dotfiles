@@ -94,10 +94,12 @@ export CPPFLAGS="-I/usr/local/opt/libiconv/include"
 export LDFLAGS="-L/usr/local/opt/node@12/lib"
 export CPPFLAGS="-I/usr/local/opt/node@12/include"
 export LDFLAGS="-L/usr/local/opt/libffi/lib"
+export LDFLAGS="-L/usr/local/opt/postgresql@11/lib"
+export CPPFLAGS="-I/usr/local/opt/postgresql@11/include"
 
 export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig:$PKG_CONFIG_PATH"
+export PKG_CONFIG_PATH="/usr/local/opt/postgresql@11/lib/pkgconfig"
 # export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
-# export PKG_CONFIG_PATH="/usr/local/opt/postgresql@10/lib/pkgconfig"
 # export ARCHFLAGS="-arch x86_64"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
@@ -143,9 +145,7 @@ export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 eval "$(rbenv init -)"
 
 export PATH="/usr/local/opt/gettext/bin:$PATH"
-# export PATH="/usr/local/opt/postgresql@10/bin:/usr/local/opt/node@12/bin:$PATH"
-export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
-# export PATH="/usr/local/opt/node@12/bin:$PATH"
+export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
 
 export PATH="/usr/local/opt/libiconv/bin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
@@ -153,3 +153,5 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 autoload bashcompinit
 bashcompinit
 source "/Users/goldenson/Code/gitlab-development-kit/support/completions/gdk.bash"
+
+export PATH="/usr/local/sbin:$PATH"
