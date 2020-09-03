@@ -116,6 +116,7 @@ alias start_pg10="brew services start postgresql@10"
 alias start_unbound="brew services start unbound"
 alias start_runit="brew services start runit"
 alias generate_schema="ruby scripts/regenerate-schema"
+alias docker_cleanup="docker system prune -a"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
