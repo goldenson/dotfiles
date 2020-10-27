@@ -117,6 +117,7 @@ alias start_unbound="brew services start unbound"
 alias start_runit="brew services start runit"
 alias generate_schema="ruby scripts/regenerate-schema"
 alias docker_cleanup="docker system prune -a"
+alias graphql="bundle exec rake gitlab:graphql:schema:dump && bundle exec rake gitlab:graphql:compile_docs"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -165,3 +166,5 @@ git () {
     [[ $1 == "clone" ]] && cd "${${2##*/}%.git}"
   fi
 }
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
