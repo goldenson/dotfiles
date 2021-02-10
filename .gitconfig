@@ -3,11 +3,6 @@
 	email = morefice@gitlab.com
 [color]
 	ui = true
-[filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
 [core]
 	autocrlf = input
 [push]
@@ -19,5 +14,12 @@
 	unstage = reset
 	cleanup = "!f() { git branch --merged | grep -v "master" | xargs -n 1 git branch -d }; f"
 	untrack = clean -fd
+[branch]
+	sort = -committerdate
 [pull]
 	ff = only
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
