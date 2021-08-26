@@ -68,7 +68,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git ruby bundler)
+plugins=(git ruby bundler asdf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -87,18 +87,13 @@ source $ZSH/oh-my-zsh.sh
 # fi
 
 # Compilation flags
-export LDFLAGS="-L/usr/local/opt/postgresql@10/lib"
-export CPPFLAGS="-I/usr/local/opt/postgresql@10/include"
 export LDFLAGS="-L/usr/local/opt/libiconv/lib"
 export CPPFLAGS="-I/usr/local/opt/libiconv/include"
 export LDFLAGS="-L/usr/local/opt/node@12/lib"
 export CPPFLAGS="-I/usr/local/opt/node@12/include"
 export LDFLAGS="-L/usr/local/opt/libffi/lib"
-export LDFLAGS="-L/usr/local/opt/postgresql@11/lib"
-export CPPFLAGS="-I/usr/local/opt/postgresql@11/include"
 
 export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig:$PKG_CONFIG_PATH"
-export PKG_CONFIG_PATH="/usr/local/opt/postgresql@11/lib/pkgconfig"
 # export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
 # export ARCHFLAGS="-arch x86_64"
 
@@ -148,7 +143,6 @@ export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 eval "$(rbenv init -)"
 
 export PATH="/usr/local/opt/gettext/bin:$PATH"
-export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
 
 export PATH="/usr/local/opt/libiconv/bin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
@@ -168,3 +162,10 @@ git () {
 }
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+export PATH="/usr/local/opt/postgresql@12/bin:$PATH"
+
+# Added by GDK bootstrap
+export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig:${PKG_CONFIG_PATH}"
+
+# Added by GDK bootstrap
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/usr/local/opt/openssl@1.1 --with-readline-dir=/usr/local/opt/readline"
