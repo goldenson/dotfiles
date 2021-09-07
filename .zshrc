@@ -15,12 +15,6 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 export PAGE='less -RS'
 
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='code'
-fi
-
 # Compilation flags
 export LDFLAGS="-L/usr/local/opt/libiconv/lib"
 export CPPFLAGS="-I/usr/local/opt/libiconv/include"
