@@ -6,6 +6,11 @@ ZSH_THEME="robbyrussell"
 DISABLE_UPDATE_PROMPT="true"
 HIST_STAMPS="yyyy-mm-dd"
 
+# Load everything
+autoload bashcompinit
+bashcompinit
+source "/Users/goldenson/Code/gitlab-development-kit/support/completions/gdk.bash"
+
 # Loading plugins
 plugins=(git ruby bundler asdf)
 
@@ -60,10 +65,5 @@ git () {
     [[ $1 == "clone" ]] && cd "${${2##*/}%.git}"
   fi
 }
-
-# Load everything
-autoload bashcompinit
-bashcompinit
-source "/Users/goldenson/Code/gitlab-development-kit/support/completions/gdk.bash"
 
 # . /usr/local/opt/asdf/libexec/asdf.sh
