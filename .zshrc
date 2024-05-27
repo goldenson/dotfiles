@@ -28,3 +28,5 @@ git () {
     [[ $1 == "clone" ]] && cd "${${2##*/}%.git}"
   fi
 }
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
