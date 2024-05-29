@@ -1,7 +1,7 @@
 [user]
 	name = Maxime Orefice
-	email = morefice@gitlab.com
-	signingkey = A7CF9143EB9D9FD8
+	email = contact@maximeorefice.com
+	signingkey = /Users/goldenson/.ssh/id_ed25519.pub
 [color]
 	ui = true
 [core]
@@ -24,7 +24,7 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[gpg]
+	format = ssh
 [commit]
 	gpgsign = true
-[gpg]
-	program = gpg
