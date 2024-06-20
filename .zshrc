@@ -7,7 +7,7 @@ DISABLE_UPDATE_PROMPT="true"
 HIST_STAMPS="yyyy-mm-dd"
 
 # Loading plugins
-plugins=(git ruby bundler asdf)
+plugins=(git ruby bundler)
 
 # Reload config
 source $ZSH/oh-my-zsh.sh
@@ -30,3 +30,4 @@ git () {
 }
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(mise activate zsh)"
