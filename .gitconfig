@@ -13,7 +13,7 @@
 [alias]
 	uncommit = reset --soft HEAD^
 	unstage = reset
-	cleanup = "!f() { git branch --merged | grep -v "master" | xargs -n 1 git branch -d }; f"
+	cleanup = "!f() { git branch --merged | grep -vE '^([+*]|\\s*(master|main)$)' | xargs -r git branch -d; }; f"
 	untrack = clean -fd
 [branch]
 	sort = -committerdate
