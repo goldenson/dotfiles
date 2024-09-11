@@ -14,7 +14,6 @@ source $ZSH/oh-my-zsh.sh
 
 export LANG=en_US.UTF-8
 export PAGE='less -RS'
-export EDITOR='code'
 
 # Aliases
 alias whatisrunning="sudo lsof -i -n -P | grep TCP | grep 3000"
