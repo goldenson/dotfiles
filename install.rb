@@ -8,7 +8,8 @@ CONFIG_FILES = {
   vscode: "settings.json",
   pry: ".pryrc",
   docker: "config.json",
-  ssh: "config"
+  ssh: "config",
+  psql: ".psqlrc"
 }
 
 def clean_up_existing_symlinks(config_key, file_name)
@@ -19,6 +20,8 @@ def clean_up_existing_symlinks(config_key, file_name)
     `rm -f ~/.docker/#{file_name}`
   when :ssh
     `rm -f ~/.ssh/#{file_name}`
+  when :psqlrc
+    `rm -f ~/.psqlrc`
   else
     `rm -f ~/#{file_name}`
   end
@@ -32,6 +35,8 @@ def create_symlink(config_key, file_name)
     `ln -s #{USER_PATH}/code/dotfiles/#{file_name} ~/.docker/#{file_name}`
   when :ssh
     `ln -s #{USER_PATH}/code/dotfiles/.ssh/#{file_name} ~/.ssh/#{file_name}`
+  when :psqlrc
+    `ln -s #{USER_PATH}/code/dotfiles/#{file_name} ~/.psqlrc`
   else
     `ln -s #{USER_PATH}/code/dotfiles/#{file_name} ~/#{file_name}`
   end
