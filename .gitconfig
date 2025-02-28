@@ -6,6 +6,10 @@
 	ui = true
 [core]
 	autocrlf = input
+[fetch]
+        prune = true
+        pruneTags = true
+        all = true
 [push]
 	default = current
 [diff]
