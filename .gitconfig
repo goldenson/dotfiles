@@ -7,9 +7,14 @@
 [core]
 	autocrlf = input
 [fetch]
-        prune = true
-        pruneTags = true
-        all = true
+	prune = true
+	pruneTags = true
+	all = true
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
 [push]
 	default = current
 [diff]
