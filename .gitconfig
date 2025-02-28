@@ -21,6 +21,8 @@
 	untrack = clean -fd
 [branch]
 	sort = -committerdate
+[tag]
+	sort = version:refname
 [pull]
 	ff = only
 [filter "lfs"]
