@@ -6,19 +6,15 @@
 	ui = true
 [core]
 	autocrlf = input
-[fetch]
-	prune = true
-	pruneTags = true
-	all = true
 [diff]
 	algorithm = histogram
 	colorMoved = plain
 	mnemonicPrefix = true
 	renames = true
-[push]
-	default = current
-[diff]
 	noprefix = true
+[push]
+	default = simple
+	autoSetupRemote = true
 [alias]
 	uncommit = reset --soft HEAD^
 	unstage = reset
@@ -39,3 +35,8 @@
 	format = ssh
 [commit]
 	gpgsign = true
+[help]
+	autocorrect = prompt
+[maintenance]
+	repo = /Users/morefice/code/gitlab-development-kit/gitlab
+	repo = /Users/morefice/code/gitlab-development-kit
