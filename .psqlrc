@@ -5,6 +5,3 @@
 \set VERBOSITY verbose
 \pset null '(null)'
 
-\pset border 2
-\pset linestyle unicode
-
